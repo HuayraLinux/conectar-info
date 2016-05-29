@@ -34,5 +34,12 @@ if (is_nodewebkit) {
 
   });
 }
+
+
+// Haciendo que la ventana no se pueda cerrar, solo se oculta.
+if (is_nodewebkit) {
+  win.on('close', function(){
+    let win = gui.Window.get();
+    win.hide();
   });
 }
