@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 
   activate() {
     this.get("tray");
-    this.get("tracker");
+    this.get("tracker").getNews();
   }
 
 });
