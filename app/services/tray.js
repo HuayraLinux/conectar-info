@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   tray: null,
+  animated: true,
 
   onInit: Ember.on("init", function() {
 
@@ -32,6 +33,32 @@ export default Ember.Service.extend({
       this.set("tray", tray);
     }
 
+    setInterval(() => {
+      this.tick();
+    }, 1000);
+
   }),
+
+
+  tick() {
+
+    if (this.get("animated")) {
+      if (this.get("tray").icon === "trayicon_1.png") {
+        this.get("tray").icon = "trayicon_2.png";
+      } else {
+        this.get("tray").icon = "trayicon_1.png";
+      }
+    }
+
+  },
+
+  disableAnimation() {
+    this.set("animated", false);
+    this.get("tray").icon = "trayicon_1.png";
+  },
+
+  enableAnimation() {
+    this.set("animated", true);
+  }
 
 });

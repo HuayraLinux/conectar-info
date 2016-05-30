@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   getNews() {
-    return new Ember.RSVP.Promise((success, reject) => {
+    return new Ember.RSVP.Promise((success/*,reject*/) => {
 
       let event_object = {
         'os': 'osx',
@@ -10,7 +10,7 @@ export default Ember.Service.extend({
         'last_update': '2015-10-10'
       };
 
-      $.ajax({
+      this.$.ajax({
         url: "http://localhost:4000/api/events",
         type: "POST",
         contentType: "application/json",
