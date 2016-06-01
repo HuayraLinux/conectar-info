@@ -4,7 +4,8 @@
     "window",
     "-Promise",
     "is_nodewebkit",
-    "requireNode"
+    "requireNode",
+    "$"
   ],
   "browser": true,
   "boss": true,

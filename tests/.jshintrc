@@ -23,7 +23,8 @@
     "currentPath",
     "currentRouteName",
     "is_nodewebkit",
-    "requireNode"
+    "requireNode",
+    "$"
   ],
   "node": false,
   "browser": false,

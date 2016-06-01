@@ -10,8 +10,8 @@ export default Ember.Service.extend({
         'last_update': '2015-10-10'
       };
 
-      this.$.ajax({
-        url: "http://localhost:4000/api/events",
+      $.ajax({
+        url: "http://conectar-info.hugoruscitti.com.ar/api/events",
         type: "POST",
         contentType: "application/json",
 
